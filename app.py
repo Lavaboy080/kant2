@@ -20,6 +20,10 @@ def meny():
 def varer():
     return render_template("varer.html")
 
+@app.route('/kontakt')
+def kontakt():
+    return render_template("kontakt.html")
+
 
 
 if __name__ == '__main__':
