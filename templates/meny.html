@@ -6,5 +6,10 @@
 <h1>Meny</h1>
 <p>meny skal stå her</p>
 <br>
+{%for element in dager%}
+    {%if dag == element%}
+    <h2>{{dager[element]}}</h2>
+    {%endif%}
+{%endfor%}
 <a href="/">gå tilbake til hjemmesiden</a>
 {%endblock%}
