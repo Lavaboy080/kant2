@@ -1,15 +1,14 @@
-{%extends "base.html"%}
+{% extends "base.html" %}
 
-{%block title%}Meny{%endblock%}
+{% block title %}Meny{% endblock %}
 
-{%block content%}
+{% block content %}
 <h1>Meny</h1>
 <p>meny skal stå her</p>
 <br>
-{%for element in dager%}
-    {%if dag == element%}
+{% for element in dager %}
+    {% if dag == element %}
     <h2>{{dager[element]}}</h2>
-    {%endif%}
-{%endfor%}
-<a href="/">gå tilbake til hjemmesiden</a>
-{%endblock%}
+    {% endif %}
+{% endfor %}
+{% endblock %}

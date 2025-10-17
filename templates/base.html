@@ -3,9 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{%block title%} {%endblock%}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>{% block title %} {% endblock %}</title>
     </head>
     <body>
-        {%block content%} {%endblock%}
+        <nav class = "navbar">
+            <a href="/meny">Gå til menyen</a>
+            <a href="/varer">Gå til deskripsjon av varer</a>
+            <a href="/kontakt">Kontakt oss</a>
+            <a href="/">Gå til hjemsiden</a>
+        </nav>
+        {% block content %} {% endblock %}
     </body>
 </html>
+
