@@ -3,8 +3,9 @@ import datetime
 
 app = Flask(__name__)
 
-dager = {'Monday':'Mandag','Tuesday':'Tirsdag','Wednesday':'Ondsdag','Thursday':'Torsdag','Friday':'Fredag','Saturday':'Lørdag','Sunday':'Søndag'}
-verdi = {'Pølser':'15kr','Risgrøt':'10kr','Pizza':'35kr','Grønnsaksuppe':'20kr','Salat':'10kr','Skolefri':'ingen mat','Skolefri':'ingen mat'}
+dager = {'Monday':'Mandag','Tuesday':'Tirsdag','Wednesday':'Ondsdag','Thursday':'Torsdag','Friday':'Fredag'}
+ukedager = ['Mandag','Tirsdag','Ondsdag','Torsdag','Fredag']
+verdi = {'Pølser':'15kr','Risgrøt':'10kr','Pizza':'35kr','Grønnsaksuppe':'20kr','Salat':'10kr'}
 beskribelse ={'Pølser':'Pølse i brød','Risgrøt':'Glutenfri Risgrøt','Pizza':'Pizzastykke med peperoni','Grønnsaksuppe':'Suppe med gulrot og potet','Salat':'Salat med tomat og agurk'}
 dag = datetime.datetime.now().strftime("%A")
 
@@ -16,7 +17,7 @@ def index():
 
 @app.route('/meny')
 def meny():
-    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag)
+    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager)
 
 @app.route('/varer')
 def varer():

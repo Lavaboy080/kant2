@@ -4,7 +4,11 @@
 
 {% block content %}
 <h1>Meny</h1>
-<p>meny skal stå her</p>
+
+{% for element in verdi %} 
+    <li>{{ukedager[loop.index0]}} selges {{element}} som koster {{verdi[element]}}</li>
+    
+{% endfor %}
 <br>
 {% for element in dager %}
     {% if dag == element %}
