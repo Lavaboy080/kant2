@@ -2,10 +2,6 @@ body {
     background-color: orangered;
 }
 
-h1 {
-    text-align: center;
-}
-
 .navbar {
     border: 2px solid black;
     color: black;

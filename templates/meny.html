@@ -4,15 +4,16 @@
 
 {% block content %}
 <h1>Meny</h1>
-
+<h2>Meny for denne uken</h2>
 {% for element in verdi %} 
     <li>{{ukedager[loop.index0]}} selges {{element}} som koster {{verdi[element]}}</li>
     
 {% endfor %}
 <br>
+<h2>Meny for i dag</h2>
 {% for element in dager %}
     {% if dag == element %}
-    <h2>{{dager[element]}}</h2>
+    <p>I dag er det {{dager[element]}} som betyr at det selges {{matretter[loop.index0]}} som koster {{pris[loop.index0]}}</p>
     {% endif %}
 {% endfor %}
 {% endblock %}
