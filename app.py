@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 matretter = ['Pølser','Risgrøt','Pizza','Grønnsaksuppe','Salat']
 pris = ['15kr','10kr','35kr','20kr','10kr']
-ukedager = ['Mandag','Tirsdag','Ondsdag','Torsdag','Fredag']
-dager = {'Monday':'Mandag','Tuesday':'Tirsdag','Wednesday':'Ondsdag','Thursday':'Torsdag','Friday':'Fredag'}
+bilder = {'Monday':'../static/bilder/Pølse.png','Tuesday':'../static/bilder/Risgrøt.png','Wednesday':'../static/bilder/Pizza.png','Thursday':'../static/bilder/Grønnsaksuppe.png','Friday':'../static/bilder/Salat.png'}
+ukedager = ['Mandag','Tirsdag','Onsdag','Torsdag','Fredag']
+dager = {'Monday':'Mandag','Tuesday':'Tirsdag','Wednesday':'Onsdag','Thursday':'Torsdag','Friday':'Fredag'}
 verdi = {'Pølser':'15kr','Risgrøt':'10kr','Pizza':'35kr','Grønnsaksuppe':'20kr','Salat':'10kr'}
 beskribelse ={'Pølser':'Pølse i brød','Risgrøt':'Glutenfri Risgrøt','Pizza':'Pizzastykke med peperoni','Grønnsaksuppe':'Suppe med gulrot og potet','Salat':'Salat med tomat og agurk'}
 dag = datetime.datetime.now().strftime("%A")
@@ -19,11 +20,11 @@ def index():
 
 @app.route('/meny')
 def meny():
-    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris)
+    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder)
 
 @app.route('/varer')
 def varer():
-    return render_template("varer.html")
+    return render_template("varer.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder)
 
 @app.route('/kontakt')
 def kontakt():

@@ -5,4 +5,12 @@
 {% block content %}
 <h1>Varer</h1>
 <p>deskripsjon av varer skal stå her</p>
+
+
+{% if dag in bilder %}
+    <img src="{{ bilder[dag] }}" alt="Matrett for {{ dag }}">
+{% endif %}
+
+
+
 {% endblock %}
