@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 matretter = ['Pølser','Risgrøt','Pizza','Grønnsaksuppe','Salat']
 pris = ['15kr','10kr','35kr','20kr','10kr']
+bilder2 = ['../static/bilder/Pølse.png','../static/bilder/Risgrøt.png','../static/bilder/Pizza.png','../static/bilder/Grønnsaksuppe.png','../static/bilder/Salat.png']
 bilder = {'Monday':'../static/bilder/Pølse.png','Tuesday':'../static/bilder/Risgrøt.png','Wednesday':'../static/bilder/Pizza.png','Thursday':'../static/bilder/Grønnsaksuppe.png','Friday':'../static/bilder/Salat.png'}
 ukedager = ['Mandag','Tirsdag','Onsdag','Torsdag','Fredag']
 dager = {'Monday':'Mandag','Tuesday':'Tirsdag','Wednesday':'Onsdag','Thursday':'Torsdag','Friday':'Fredag'}
@@ -20,11 +21,11 @@ def index():
 
 @app.route('/meny')
 def meny():
-    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder)
+    return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder,bilder2 = bilder2)
 
 @app.route('/varer')
 def varer():
-    return render_template("varer.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder)
+    return render_template("varer.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder,bilder2 = bilder2)
 
 @app.route('/kontakt')
 def kontakt():
