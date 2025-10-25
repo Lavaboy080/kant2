@@ -2,15 +2,12 @@ body {
     background-color: orangered;
 }
 
-
 img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border: 5px solid black;
 }
-
-
 
 .navbar {
     border: 2px solid black;
@@ -18,10 +15,15 @@ img {
     background: white;
     text-align: center;
     font-size: xx-large;
-    padding: 50px;
+    padding: 20px;
 }
 
 .navbar a {
-    padding: 25px;
+    padding: 50px;
 }
+
+.varer p{
+    white-space: nowrap;
+}
+
 
