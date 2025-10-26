@@ -4,7 +4,7 @@ import datetime
 app = Flask(__name__)
 
 matretter = ['Pølser','Risgrøt','Pizza','Grønnsaksuppe','Salat']
-beskribelse =['Pølse i brød med ketchup eller sennep','Risgrøt med kanel','Pizzastykke med peperoni','Suppe med gulrot og potet','Salat med tomat og agurk']
+beskribelse =['Pølse med tilbehør','Risgrøt med tilbehør','Pizzastykke med peperoni','Suppe med gulrot og potet','Salat med tomat og agurk']
 igredienser = ['Melk','Grøtris','Sukker','Purre','Gulrot','Brekkbønner','Tomat','Agurk','Isbergsalat','Pølse','Pølsebrød','Ketchup','Mel','Gjær','Vann','Olje','Sennep','Smør','Kanel','Pepperoni']
 pris = ['15kr','10kr','35kr','20kr','10kr']
 bilder3 = ['../static/bilder/Melk.png','../static/bilder/Grøtris.png','../static/bilder/Sukker.png','../static/bilder/Purre.png','../static/bilder/Gulrot.png','../static/bilder/Brekkbønner.png','../static/bilder/Tomat.png','../static/bilder/Agurk.png','../static/bilder/Isbergsalat.png','../static/bilder/Pølsepakker.png','../static/bilder/Pølsebrød.png','../static/bilder/Ketchup.png','../static/bilder/Mel.png','../static/bilder/Gjær.png','../static/bilder/Vann.png','../static/bilder/Olje.png','../static/bilder/Sennep.png','../static/bilder/Smør.png','../static/bilder/Kanel.png','../static/bilder/Pepperoni.png']
