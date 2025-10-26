@@ -2,13 +2,6 @@ body {
     background-color: orangered;
 }
 
-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 5px solid black;
-}
-
 .navbar {
     border: 2px solid black;
     color: black;
@@ -22,8 +15,26 @@ img {
     padding: 50px;
 }
 
-.varer p{
-    white-space: nowrap;
+.meny-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;       
+    justify-content: center;
 }
+
+.meny-element {
+    text-align: center;    /* plasserer teksten over bildet sentrert */
+    width: 200px;          /* juster etter ønsket størrelse */
+}
+
+.meny-element img {
+    width: 100%;
+    height: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid black;
+}
+
 
 
