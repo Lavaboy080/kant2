@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+<h1>Ingredienser</h1>
+<div class="meny-container">
+    {% for element in bilder3 %}
+        <div class="meny-element">
+            <p>{{ igredienser[loop.index0] }}</p>  
+            <img src="{{ element }}" alt="matrett">
+        </div>
+    {% endfor %}
+</div> 
+
+{% endblock %}
