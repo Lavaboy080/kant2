@@ -4,7 +4,7 @@ import datetime
 app = Flask(__name__)
 
 matretter = ['Pølser','Risgrøt','Pizza','Grønnsaksuppe','Salat']
-beskribelse =['Pølse med tilbehør','Risgrøt med tilbehør','Pizzastykke med peperoni','Suppe med gulrot og potet','Salat med tomat og agurk']
+beskribelse =['Pølse med tilbehør','Risgrøt med tilbehør','Pizzastykke med peperoni','Grønnsaksuppe','Salat med tomat og agurk']
 igredienser = ['Melk','Grøtris','Sukker','Purre','Gulrot','Brekkbønner','Tomat','Agurk','Isbergsalat','Pølse','Pølsebrød','Ketchup','Mel','Gjær','Vann','Olje','Sennep','Smør','Kanel','Pepperoni','Brød','Ost','Reker','Mr le kopp','Skinke']
 pris = ['15kr','10kr','35kr','20kr','10kr']
 fastvarer = ['Vann','Melk','Rekesmørbrød','Nudler','Toast']

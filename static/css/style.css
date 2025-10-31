@@ -2,6 +2,15 @@ body {
     background-color: orangered;
 }
 
+.akademiet img {
+    width: auto;
+    width: 1420px;
+    height: 250px;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+}
+
 .navbar {
     border: 2px solid black;
     color: black;
