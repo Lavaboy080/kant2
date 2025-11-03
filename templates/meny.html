@@ -1,16 +1,31 @@
 {% extends "base.html" %}
 
+<!-- h1 endrer tittel-->
 {% block title %}Meny{% endblock %}
 
 {% block content %}
+
+<!-- h1 lager overskrift-->
 <h1>Meny</h1>
+
+<!-- h2 lager mindre overskrift-->
 <h2>Meny for denne uken</h2>
+
 {% for element in verdi %} 
     <li>{{ukedager[loop.index0]}} selges {{element}} som koster {{verdi[element]}}</li>  
 {% endfor %}
-<p>tilbehør for pølser er valgfritt og inkluderer ketchup og sennep.</p>
+
+<!-- p skriver ut -->
+<p>Tilbehør for pølser er valgfritt og inkluderer ketchup og sennep.</p>
 <p>Tilbehør for risgrøt er valgfritt og inkluderer sukker, kanel og smør.</p>
 <p>Det koster ikke noe ekstra for tilbehør</p>
+
+<!-- for kjører ting innenfor løkken så mange ganger som elementer i verdi-->
+<!-- li lager en liste og for all teksten til å ligge nermere hverandre-->
+<!-- loop.index0 gjør at en variabel lages som øker med 1 for hver gang loopen kjører -->
+<!-- det printes ut dager retter og priser basert på hvor mange ganger løkken har kjørt -->
+<!-- ukedager er en liste og verdi er en ordbok med verdi av matretter som verdi og retter som nøkler. Begge finnes i app.py -->
+
 <div class="meny-container">
     {% for element in bilder2 %}
         <div class="meny-element">
@@ -20,8 +35,19 @@
     {% endfor %}
 </div>
 
+<!-- br identefiserer en linebreak-->
 <br>
+
+<!-- h2 lager en minder overskrift-->
 <h2>Meny for i dag</h2>
+
+<!-- for kjører ting innenfor løkken så mange ganger som elementer i verdi-->
+<!-- if skjekker om noe er likt og om det er det skjer det under ifen-->
+<!-- else kjører om if ikke kjører-->
+<!-- loop.index0 gjør at en variabel lages som øker med 1 for hver gang loopen kjører -->
+<!-- det printes ut dagen i dag dagens rett og prisen -->
+<!-- dag er en variabel som sier hvilken dag det er engelsk, dager er en orbok, matretter er en liste og pris er en liste. alt dette finner du i app.py-->
+
 {% for element in dager %}
     {% if dag == element %}
     <p>I dag er det {{dager[element]}} som betyr at det selges {{matretter[loop.index0]}} som koster {{pris[loop.index0]}}</p>

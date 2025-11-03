@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %} Homepage {% endblock %}
+{% block title %} Ingredienser {% endblock %}
 
 {% block content %}
+<!-- skriver ut all tekst i ingridienser -->
+<!-- h1 definerer en overskrift og det inni blir teksten -->
+<!-- p definerer en paragraf for å skrive ut tekst -->
+
+
 <h1>Ingredienser</h1>
 <p>Hvis det er spesefike ingridienser som du lurer på hva innhold er så må du søke det opp.</p>
 <p>Pølse med tilbehør inneholder: Pølse, Pølsebrød og eventuelt ketchup og sennep.</p>
@@ -16,6 +21,13 @@
 <p>Nudler inneholder: Mr le kopp.</p>
 <p>Toast inneholder: Brød, Ost og skinke.</p>
 
+<!-- bruker classen meny-container for å style alt inni løkken-->
+<!-- for element in bilder3 er en løkke som kjører så mange ganger som elementer i listen bilder3(listen er i app.py) -->
+<!-- bruker klassen meny-element for å style tekst over bildene og endre bildene -->
+<!-- p printer ut et element i listen igredienser som finnes i app.py -->
+<!-- loop.index0 gjør at en variabel lages som øker med 1 for hver gang loopen kjører -->
+<!-- img src brukes for å legge inn bilder som er i listen bilder3-->
+<!-- sammen lager det flere rekker med bilder som har tekst over -->
 
 <div class="meny-container">
     {% for element in bilder3 %}

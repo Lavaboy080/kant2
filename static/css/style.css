@@ -1,34 +1,35 @@
+
 body {
-    background-color: orangered;
+    background-color: orangered; /* Setter bakgrunnsfagre */
 }
 
+
 .akademiet img {
-    width: auto;
-    width: 1420px;
-    height: 250px;
-    position: fixed;
-    bottom: 0%;
-    left: 0%;
+    width: 1420px; /* justerer bildet til å være 1420 piksler bredt */
+    height: 250px; /* justerer bildet til å være 250 piksler høyt */
+    position: fixed; /* tvinger bildet til å være i fast posison selv når man scroller */
+    bottom: 0%; /* Plasserer bildet helt nederst på skjermen */
+    left: 0%; /* Plasserer bildet helt til venstre på skjermen */
 }
 
 .navbar {
-    border: 2px solid black;
-    color: black;
-    background: white;
-    text-align: center;
-    font-size: xx-large;
-    padding: 20px;
+    border: 2px solid black; /* lager en 2 pixe stor outline rundtnavbaren */
+    color: black; /* gjør fargen i navbaren sort */
+    background: white; /* setter bakgrunnsfargen til hvit */
+    text-align: center; /* sentrerer teksten horisontalt */
+    font-size: xx-large; /* gjør teksten ekstra stor */
+    padding: 20px; /* gir innvendig luft mellom tekst og navbar */
 }
 
 .navbar a {
-    padding: 10px;
+    padding: 10px; /* justerer mellomrom mellom alle lenkene */
 }
 
 .meny-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;       
-    justify-content: center;
+    display: flex; /* aktiverer flexbox */
+    flex-wrap: wrap; /* gjør at elementer går til neste linje hvis det ikke er plass */
+    gap: 80px; /* avstand mellom elementene */   
+    justify-content: center; /* sentrerer elementene horiontalt */
 }
 
 .meny-element {
@@ -37,12 +38,12 @@ body {
 }
 
 .meny-element img {
-    width: 100%;
-    height: auto;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 5px solid black;
+    width: 100%; /* gjør at bildet blir vist 100% av bredden */
+    height: auto; /* hindrer at bildet beholder proposjoner når det blir strekt */
+    width: 200px; /* gjør bredden om til 200px */
+    height: 200px; /* gjør høyden om til 200px */
+    object-fit: cover; /* Sørger for at bildet fyller rammen uten å bli strukket (beskjærer om nødvendig) */
+    border: 5px solid black; /* lager en 2 pixe stor outline rundtnavbaren */
 }
 
 

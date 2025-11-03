@@ -3,6 +3,7 @@ import datetime
 
 app = Flask(__name__)
 
+#lister med retter, dager, priser og bilder 
 matretter = ['Pølser','Risgrøt','Pizza','Grønnsaksuppe','Salat']
 beskribelse =['Pølse med tilbehør','Risgrøt med tilbehør','Pizzastykke med peperoni','Grønnsaksuppe','Salat med tomat og agurk']
 igredienser = ['Melk','Grøtris','Sukker','Purre','Gulrot','Brekkbønner','Tomat','Agurk','Isbergsalat','Pølse','Pølsebrød','Ketchup','Mel','Gjær','Vann','Olje','Sennep','Smør','Kanel','Pepperoni','Brød','Ost','Reker','Mr le kopp','Skinke']
@@ -19,24 +20,35 @@ verdi = {'Pølser':'15kr','Risgrøt':'10kr','Pizza':'35kr','Grønnsaksuppe':'20k
 dag = datetime.datetime.now().strftime("%A")
 
 
-
+#kjører det dokumentet som er inni rendertemplate og routen er liksom lenken
+#dette er hjemsiden som kjører index.html
 @app.route('/')
 def index():
     return render_template("index.html")
 
+#kjører det dokumentet som er inni rendertemplate og routen er liksom lenken
+#dette er hjemsiden som kjører meny.html
+#alle listene blir lagt til her
 @app.route('/meny')
 def meny():
     return render_template("meny.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder,bilder2=bilder2,igredienser=igredienser,bilder3=bilder3,bilder4 =bilder4,fastpris=fastpris,fastvarer=fastvarer)
 
+#kjører det dokumentet som er inni rendertemplate og routen er liksom lenken
+#dette er hjemsiden som kjører varer.html
+#alle listene blir lagt til her
 @app.route('/varer')
 def varer():
     return render_template("varer.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder,bilder2=bilder2,igredienser=igredienser,bilder3=bilder3,bilder4 =bilder4,fastpris=fastpris,fastvarer=fastvarer)
 
+#kjører det dokumentet som er inni rendertemplate og routen er liksom lenken
+#dette er hjemsiden som kjører ingredienser.html
+#alle listene blir lagt til her
 @app.route('/ingredienser')
 def ingridienser():
     return render_template("ingredienser.html",dager=dager,verdi=verdi,beskribelse=beskribelse,dag=dag,ukedager=ukedager,matretter=matretter,pris=pris,bilder=bilder,bilder2=bilder2,igredienser=igredienser,bilder3=bilder3,bilder4 =bilder4,fastpris=fastpris,fastvarer=fastvarer)
 
-
+#kjører det dokumentet som er inni rendertemplate og routen er liksom lenken
+#dette er hjemsiden som kjører kontakt.html
 @app.route('/kontakt')
 def kontakt():
     return render_template("kontakt.html")

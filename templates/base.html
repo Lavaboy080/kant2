@@ -3,9 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- kobler til css stylesheetet-->
         <link rel="stylesheet" href="/static/css/style.css">
+<!-- block title brukes for å lage en ting som kan endres hvis dette dokumentet blir ekstended(blir det)-->
         <title>{% block title %} {% endblock %}</title>
     </head>
+
+<!-- bruker klassen navbar for å style alle lenkene-->
+<!-- a href brukes til å lage links og det utenfor "" er tesken som skal bli vist. det inni "" er lenken-->
+<!-- disse lenkene leder til forskjellige html dokumenter i app.py-->
     <body>
         <nav class = "navbar">
             <a href="/">Gå til hjemsiden</a>
@@ -14,10 +21,19 @@
             <a href="/kontakt">Kontakt oss</a>
             <a href="/ingredienser">Gå til ingredienser</a>
         </nav>
+
+        <!-- bruker klassen akademiet til å style bildet-->
+
         <div class="akademiet">
             <img src="../static/bilder/Akademiet.png" alt="Logo">
         </div>
+
+        <!-- content brukes for å legge til info hvis denne filen skal exstendes(den skal det)-->
+
         {% block content %} {% endblock %} 
+
+        <!-- br identifinerer linebreak-->
+
         <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
     </body>
 </html>

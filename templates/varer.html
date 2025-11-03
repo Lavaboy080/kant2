@@ -1,12 +1,23 @@
 {% extends "base.html" %}
 
+<!-- h1 endrer tittel-->
 {% block title %}Varer{% endblock %}
 
 {% block content %}
 <h1>Varer</h1>
 
+<!-- h2 skriver ut en overskrift men litt mindre siden jo høyere tall jo mindre-->
 <h2>Meny</h2>
 <p>Priser og tilbehør står i meny<p>
+
+<!-- bruker classen meny-container for å style alt inni løkken-->
+<!-- for element in bilder2 er en løkke som kjører så mange ganger som elementer i listen bilder2(listen er i app.py) -->
+<!-- bruker klassen meny-element for å style tekst over bildene og endre bildene -->
+<!-- p printer ut et element i listen beskribelse som finnes i app.py -->
+<!-- loop.index0 gjør at en variabel lages som øker med 1 for hver gang loopen kjører -->
+<!-- img src brukes for å legge inn bilder som er i listen bilder2-->
+<!-- sammen lager det flere rekker med bilder som har tekst over -->
+
 <div class="meny-container">
     {% for element in bilder2 %}
         <div class="meny-element">
@@ -16,7 +27,18 @@
     {% endfor %}
 </div>
 
+<!-- h2 skriver ut en overskrift men litt mindre siden jo høyere tall jo mindre-->
 <h2>Faste varer</h2>
+
+<!-- bruker classen meny-container for å style alt inni løkken-->
+<!-- for element in bilder4 er en løkke som kjører så mange ganger som elementer i listen bilder3(listen er i app.py) -->
+<!-- bruker klassen meny-element for å style tekst over bildene og endre bildene -->
+<!-- p printer ut et element i listen fastvarer som finnes i app.py -->
+<!-- den andre pen printer ut et element i listen fastpris som finnes i app.py -->
+<!-- loop.index0 gjør at en variabel lages som øker med 1 for hver gang loopen kjører -->
+<!-- img src brukes for å legge inn bilder som er i listen bilder4-->
+<!-- sammen lager det flere rekker med bilder som har tekst over og en pris-->
+
 <div class="meny-container">
     {% for element in bilder4 %}
         <div class="meny-element">
@@ -26,9 +48,4 @@
         </div>
     {% endfor %}
 </div>
-
-
-
-
-
 {% endblock %}
